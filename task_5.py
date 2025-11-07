@@ -3,7 +3,8 @@ class Results:
         self.victories = victories
         self.draws = draws
         self.losses = losses
-    
+
+# создаем подклассы
 class Football(Results):
     def number_of_wins(self):
         return f"Футбольных побед: {self.victories}"
