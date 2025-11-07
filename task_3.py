@@ -31,6 +31,10 @@ class TotalPoints(PointsForPlace, PointsForMeters):
     def get_total_points(self, place, meters):
         place_points = self.get_points_for_place(place)
         meters_points = self.get_points_for_meters(meters)
+
+        place_points = place_points if place_points is not None else 0
+        meters_points = meters_points if meters_points is not None else 0
+
         self.total = place_points + meters_points
         return self.total
 
